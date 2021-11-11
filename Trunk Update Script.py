@@ -3,14 +3,14 @@ from netmiko import ConnectHandler
 import re
 import sys
 import paramiko
-fd = open(r'C:\Users\Chris\\PythonOutput.txt','w') 
+fd = open(r'C:\Users\"user"\\PythonOutput.txt','w') 
 sys.stdout = fd 
 platform = 'cisco_ios'
 username = 'admin'
 password = 'admin'
 
 ##Make this the directory of the IPlist.txt
-ip_add_file = open(r'C:\Users\Chris\\IPAddressList.txt','r') 
+ip_add_file = open(r'C:\Users\"user"\\IPAddressList.txt','r') 
 
 for host in ip_add_file:
     device = ConnectHandler(device_type=platform, ip=host, username=username, password=password)
